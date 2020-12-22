@@ -27,7 +27,20 @@ hr.main {
     width: 100%;
     font-size: 14pt;
     border-radius: 5px;
+    border: 1px solid #0088cc;
+}
+
+#mapid {
+    border-radius: 5px;
     border: 1px solid #aaaaaa;
+    border: 1px solid #0088cc;
+}
+
+#mapid:hover {
+    outline: none !important;
+    border: 1px solid #0088cc;
+    box-shadow: 0 0 10px #0088cc;
+    border-radius: 5px;
 }
 
 #route-input:focus {
