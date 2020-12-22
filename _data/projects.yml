@@ -1,12 +1,5 @@
-# Projects
-# uncomment the urls if you wish to display them, and add your own URL
-
-# jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
-  # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+- project: Удобство превыше всего!
+  description: Проект должен быть простым насколько это возможно. Сейчас боту достаточно написать название остановки (даже с ошибками) и он всё поймет
 
 # Springfield Community Outreach Group
 - project: Springfield Community Outreach Group

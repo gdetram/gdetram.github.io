@@ -52,7 +52,21 @@
         </div>
         <input type="text" id="route-input">
       </section>
+
       <!-- end Experience -->
+      {% endif %}
+
+      {% if site.resume_section_projects %}
+      <!-- begin Projects -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Не пользуетесь общественным транспортом?</h2>
+          <hr class="main">
+        </header>
+        <script async src="https://telegram.org/js/telegram-widget.js?14" data-telegram-post="gdetram/5" data-width="100%"></script>
+        <script async src="https://telegram.org/js/telegram-widget.js?14" data-telegram-post="gdetram/6" data-width="100%"></script>
+      </section>
+      <!-- end Projects -->
       {% endif %}
 
       {% if site.resume_section_projects %}
@@ -62,16 +76,6 @@
           <h2>Философия проекта</h2>
           <hr class="main">
         </header>
-
-        {% for project in site.data.projects %}
-        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
-          <p class="resume-item-copy">{{ project.description }}</p>
-        </div>
-        {% endfor %}
-
       </section>
       <!-- end Projects -->
       {% endif %}
@@ -84,13 +88,6 @@
           <h2>Команда</h2>
           <hr class="main">
         </header>
-        {% for skill in site.data.skills %}
-        <div class="resume-item">
-          <h4 class="resume-item-details">{{ skill.skill }}</h4>
-          <p class="resume-item-copy">{{ skill.description }}</p>
-        </div>
-        {% endfor %}
-
       </section>
       <!-- end Skills -->
       {% endif %}
