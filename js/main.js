@@ -3,7 +3,7 @@ var circles = [];
 var mymap = L.map('mapid').setView([56.838607, 60.605514], 13);
 var line = new L.Polyline([], {
     color: 'red',
-    weight: 17,
+    weight: 7,
     opacity: 0.5,
     smoothFactor: 1,
     interactive: false
@@ -16,10 +16,11 @@ function rand(min, max) {
 function createCircle(x, y, id) {
     var circle = L.circleMarker([x, y]);
     circle.id = id;
+    circle.setRadius(5);
     circle.setStyle({ color: "#0088cc" });
 
-    circle.on('mouseover', function (e) { circle.setRadius(15); });
-    circle.on('mouseout', function (e) { circle.setRadius(10); });
+    circle.on('mouseover', function (e) { circle.setRadius(10); });
+    circle.on('mouseout', function (e) { circle.setRadius(5); });
 
     circle.on('mousedown', function (e) {
         var route = document.getElementById("route-input").value.split(",");
@@ -63,10 +64,8 @@ function redrawRoute() {
     }
 }
 
-for (i = 0; i < 100; ++i) {
-    var x = 56.838607 + rand(-0.05, 0.05);
-    var y = 60.605514 + rand(-0.05, 0.05);
-    var circle = createCircle(x, y, i);
+for (i = 0; i < stops.length; ++i) {
+    var circle = createCircle(stops[i].lat, stops[i].lon, i+1);
     circles.push(circle);
     circle.addTo(mymap);
 }
