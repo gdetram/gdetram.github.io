@@ -30,11 +30,11 @@
 
   .header-name {
     @include sans;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
     text-align: center;
     letter-spacing: -.15rem;
-    line-height: 1;
+    line-height: 0.5;
     margin: 1rem 0 0;
   }
 

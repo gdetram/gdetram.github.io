@@ -14,6 +14,10 @@
 @import "resume";
 
 #mapid { height: 600px; }
+hr.first {
+  border-top: 1px solid #0088cc;
+  margin: 0px -10000px 10px;
+}
 hr.main {
   border-top: 1px solid #0088cc;
 }
