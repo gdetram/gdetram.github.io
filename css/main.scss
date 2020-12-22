@@ -14,3 +14,21 @@
 @import "resume";
 
 #mapid { height: 600px; }
+hr.main {
+  border-top: 1px solid #0088cc;
+}
+
+#route-input {
+    height: 40px;
+    width: 100%;
+    font-size: 14pt;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+}
+
+#route-input:focus {
+    outline: none !important;
+    border: 1px solid #0088cc;
+    box-shadow: 0 0 10px #0088cc;
+    border-radius: 5px;
+}
