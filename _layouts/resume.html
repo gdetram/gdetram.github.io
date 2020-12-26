@@ -32,6 +32,18 @@
         </div>
       </header>
 
+      {% if site.resume_section_projects %}
+      <!-- begin Projects -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Будет полезен даже людям у которых свои авто</h2>
+          <hr class="main">
+        </header>
+        <script async src="https://telegram.org/js/telegram-widget.js?14" data-telegram-post="gdetram/5" data-width="100%"></script>
+      </section>
+      <!-- end Projects -->
+      {% endif %}
+
       {% if site.site_section_map %}
       <!-- begin Experience -->
       <section class="content-section">
@@ -39,26 +51,38 @@
           <h2>Конструктор маршрутов</h2>
           <hr class="main">
         </header>
+
+        <p>Модель машины</p>
         <div class="resume-item">
-          <div id="mapid"></div>
+          <input id="car-model" type="text" class="input" onfocusout="updateLink();">
         </div>
-        <input type="text" id="route-input" onKeyUp="redrawRoute();">
+
+        <p>Цвет машины</p>
+        <div class="resume-item">
+          <input id="car-color" type="text" class="input" onfocusout="updateLink();">
+        </div>
+
+        <p>Номер машины</p>
+        <div class="resume-item">
+          <input id="car-number" type="text" class="input" onfocusout="updateLink();">
+        </div>
+
+        <p>Стоимость проезда</p>
+        <div class="resume-item">
+          <input id="route-price" type="text" class="input" onfocusout="updateLink();">
+        </div>
+
+        <p>Маршрут</p>
+        <div class="resume-item">
+          <div id="mapid" onmouseleave="updateLink();"></div>
+        </div>
+        <input type="text" id="route-input" class="input" onKeyUp="redrawRoute();">
+      </section>
+      <section class="content-section">
+        <a id="send-route" href='https://t.me/share/url?url=t.me/gdetrambot&text=/help' target="_blank"><button class="button">Отправить маршрут боту</button></a>
       </section>
 
       <!-- end Experience -->
-      {% endif %}
-
-      {% if site.resume_section_projects %}
-      <!-- begin Projects -->
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Не пользуетесь общественным транспортом?</h2>
-          <hr class="main">
-        </header>
-        <script async src="https://telegram.org/js/telegram-widget.js?14" data-telegram-post="gdetram/5" data-width="100%"></script>
-        <script async src="https://telegram.org/js/telegram-widget.js?14" data-telegram-post="gdetram/6" data-width="100%"></script>
-      </section>
-      <!-- end Projects -->
       {% endif %}
 
       {% if site.resume_section_projects %}

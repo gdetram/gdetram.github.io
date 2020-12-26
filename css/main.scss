@@ -22,7 +22,7 @@ hr.main {
   border-top: 1px solid #0088cc;
 }
 
-#route-input {
+.input {
     height: 40px;
     width: 100%;
     font-size: 14pt;
@@ -48,4 +48,25 @@ hr.main {
     border: 1px solid #0088cc;
     box-shadow: 0 0 10px #0088cc;
     border-radius: 5px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #0088cc;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#send-route {
+    color: #fff
+}
+
+.button:hover {
+    border: none;
+    background-color: #005580;
 }

@@ -11,7 +11,7 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "ГДЕ ТРАНСПОРТ?"
-resume_title:                   "Сервис для повышения удобства передвижения жителей в городах"
+resume_title:                   "Сервис для отслеживания времени прибытия транспорта на остановки"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           "lisasimpson@youremailaddress.com"

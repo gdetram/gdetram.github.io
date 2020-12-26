@@ -64,6 +64,17 @@ function redrawRoute() {
     }
 }
 
+function updateLink() {
+    var carModel = document.getElementById("car-model").value;
+    var carColor = document.getElementById("car-color").value;
+    var carNumber = document.getElementById("car-number").value;
+    var routePrice = document.getElementById("route-price").value;
+    var route = document.getElementById("route-input").value;
+    var link = "https://t.me/share/url?url=t.me/gdetrambot&text=" + carModel + ";" + carColor + ";" + carNumber + ";" + routePrice + ";" + route;
+    console.log(link)
+    document.getElementById("send-route").setAttribute("href", link);
+}
+
 for (i = 0; i < stops.length; ++i) {
     var circle = createCircle(stops[i].lat, stops[i].lon, i+1);
     circles.push(circle);
