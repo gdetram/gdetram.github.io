@@ -16,11 +16,11 @@ function rand(min, max) {
 function createCircle(x, y, id) {
     var circle = L.circleMarker([x, y]);
     circle.id = id;
-    circle.setRadius(5);
+    circle.setRadius(10);
     circle.setStyle({ color: "#0088cc" });
 
-    circle.on('mouseover', function (e) { circle.setRadius(10); });
-    circle.on('mouseout', function (e) { circle.setRadius(5); });
+    circle.on('mouseover', function (e) { circle.setRadius(15); });
+    circle.on('mouseout', function (e) { circle.setRadius(10); });
 
     circle.on('mousedown', function (e) {
         var route = document.getElementById("route-input").value.split(",");
